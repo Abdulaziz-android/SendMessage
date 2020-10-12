@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#283478"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+
+        android:layout_marginHorizontal="20dp"
+        android:hint="@string/enter_phone_numbers"
+        android:layout_marginTop="20dp"
+        android:padding="8dp"
+        android:background="@drawable/edittext_back"
+        android:ems="10"
+        android:gravity="start"
+        android:imeOptions="actionNext"
+        android:inputType="textMultiLine"
+        android:digits="0123456789+ \n"
+        android:singleLine="false" />
+
+    <EditText
+        android:id="@+id/editText_message"
+        android:layout_width="match_parent"
+        android:background="@drawable/edittext_back"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:padding="8dp"
+        android:hint="@string/enter_message"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:singleLine="false" />
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:background="@drawable/textview_back"
+        android:layout_marginHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:hint="@string/result"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/button"
+        android:layout_width="140dp"
+        android:layout_marginVertical="30dp"
+        android:layout_height="50dp"
+        android:onClick="sendMessage"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="16dp">
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:src="@drawable/ic_send"
+                android:layout_marginStart="10dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="start"
+                android:text="SEND"
+                android:textColor="@android:color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
